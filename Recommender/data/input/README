@@ -1,0 +1,60 @@
+    
+Movies: 13577  Features: 1852
+Train: 60, Test: 20, CV: 20
+Finished with the training dataset
+Users: 190152
+Train entries: 456788
+Test entries: 33701
+CV entries: 111755
+Finished with the test and cv datasets
+    
+    
+SMALL DATASET (/netflix_imdb/input/small/)
+
+   * The training dataset
+        
+        1) train/ratings/*
+           The dataset contains 456788 ratings of 60 movies given by 190152 users.
+           The entries are normalized by the average rating of each user.
+           UserID: 1..190152 
+           MovieID: 1..60           
+           
+        2) train/U/*
+           The U matrix (190152 x 10) obtained after decomposing the utility matrix (user-movie ratings).
+           
+        3) train/V/*
+           The V matrix (10 x 60) obtained after decomposing the utility matrix (user-movie ratings).   
+               
+        4) train/features/*
+           The dataset contains IMDB features of 8146 movies. 
+           MovieID: 1..60           
+           FeatureID: 1..1852
+            
+           
+   * The test dataset
+
+        1) test/ratings/*
+           The dataset contains 33701 ratings of 20 new movies given by the same set of users.
+           The entries are normalized by the average rating of each user.
+           UserID: 1..190152 
+           MovieID: 61..80           
+                  
+        2) train/features/*
+           The dataset contains IMDB features of 20 movies. 
+           MovieID: 61..80         
+           FeatureID: 1..1852
+        
+        
+   * The cross-validation dataset
+
+        1) test/ratings/*
+           The dataset contains 111755 ratings of 20 new movies given by the same set of users.
+           The entries are normalized by the average rating of each user.
+           UserID: 1..190152 
+           MovieID: 81..100           
+                  
+        2) train/features/*
+           The dataset contains IMDB features of 20 movies. 
+           MovieID: 81..100         
+           FeatureID: 1..1852
+
