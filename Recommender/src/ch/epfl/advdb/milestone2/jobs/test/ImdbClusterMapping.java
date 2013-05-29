@@ -32,6 +32,16 @@ import ch.epfl.advdb.milestone2.utils.IntArrayWritable;
 import ch.epfl.advdb.milestone2.utils.IntFloatPair;
 import ch.epfl.advdb.milestone2.utils.IntFloatPairArray;
 
+
+/**
+ *
+ * cache: Imdb cluster centers
+ * input: Test Movie
+ * output: test Movie mapping to Imdb cluster (one to many)
+ * @author ashish
+ *
+ */
+
 public class ImdbClusterMapping {
 	public static class ClusterMapper extends MapReduceBase 
 	implements Mapper<LongWritable, Text, IntWritable, IntArrayWritable> {
@@ -59,7 +69,7 @@ public class ImdbClusterMapping {
 		    
 		}
 		
-		//<V,fi,movieid,value>
+		
 		public void loadCenter(FileSystem fs, Path  path, Configuration conf){
 			SequenceFile.Reader reader ;
 			try {
@@ -87,6 +97,7 @@ public class ImdbClusterMapping {
 		}
 		IntWritable opKey = new IntWritable();
 		IntArrayWritable inValue = new IntArrayWritable();
+		
 		@Override
 		public void map(LongWritable inKey, Text value,
 				OutputCollector<IntWritable, IntArrayWritable> output, 
@@ -100,7 +111,7 @@ public class ImdbClusterMapping {
 			opKey.set(Integer.parseInt(tokens[0]));
 			inValue.setStringArray(tokens, 1);
 			float[] dist = new float[Constant.K];
-			float minDist = 898989;
+			float minDist = Float.MAX_VALUE;
 			for(int i=0; i<Constant.K; i++) {
 				dist[i] = getDistance(i, inValue);
 				if(dist[i]<minDist) {

@@ -25,6 +25,11 @@ import ch.epfl.advdb.milestone2.config.Constant;
 import ch.epfl.advdb.milestone2.utils.FloatArrayWritable;
 import ch.epfl.advdb.milestone2.utils.IntFloatPair;
 
+/**
+ * convert text input format to sequential file format
+ * @author ashish
+ *
+ */
 public class ParseNflixData {
 	
 	static class DataNflixMapper extends MapReduceBase 

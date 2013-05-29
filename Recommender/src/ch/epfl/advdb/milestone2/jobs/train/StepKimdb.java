@@ -34,7 +34,12 @@ import ch.epfl.advdb.milestone2.utils.Kmath;
 
 public class StepKimdb {
 	
-
+	/**
+	 * EM step of Kmean clustering alogrithm for imdb clusters
+	 * @author ashish
+	 *
+	 */
+	
 	public static class StepKMapper extends MapReduceBase
 		implements Mapper<IntWritable, IntArrayWritable, 
 		IntWritable, IntArrayWritable> {

@@ -35,6 +35,11 @@ import ch.epfl.advdb.milestone2.utils.IntFloatPair;
 import ch.epfl.advdb.milestone2.utils.IntFloatPairArray;
 import ch.epfl.advdb.milestone2.utils.Kmath;
 
+/**
+ * initialize K initial cluster centers
+ * @author ashish
+ *
+ */
 public class InitKimdb {
 	static int K = Constant.K;
 	

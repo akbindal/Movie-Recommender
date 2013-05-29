@@ -35,6 +35,15 @@ import ch.epfl.advdb.milestone2.utils.ImdbVector;
 import ch.epfl.advdb.milestone2.utils.IntArrayWritable;
 import ch.epfl.advdb.milestone2.utils.IntFloatPairArray;
 
+/**
+*
+* cache: imdb and netflix clusters mapping
+* input: Netflix user mapping from previous job
+* output: mapping  from imdb cluster to user (one to many)
+* @author ashish
+*
+*/
+
 public class ImdbUserMapping {
 	
 	static class ImdbMapper extends MapReduceBase implements 
@@ -61,7 +70,7 @@ public class ImdbUserMapping {
 		    
 		}
 		
-		//read u file 
+		 
 		public void loadNflixMapping(FileSystem fs, Path  path, Configuration conf){
 			SequenceFile.Reader reader ;
 			try {

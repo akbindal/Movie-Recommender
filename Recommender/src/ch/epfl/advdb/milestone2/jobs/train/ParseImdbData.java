@@ -34,6 +34,11 @@ import ch.epfl.advdb.milestone2.utils.IntArrayWritable;
 import ch.epfl.advdb.milestone2.utils.IntFloatPair;
 import ch.epfl.advdb.milestone2.utils.IntFloatPairArray;
 
+/**
+ * convert text input format to sequential file format
+ * @author ashish
+ *
+ */
 public class ParseImdbData {
 	
 	static class DataimdbMapper extends MapReduceBase 

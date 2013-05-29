@@ -34,6 +34,11 @@ import ch.epfl.advdb.milestone2.utils.IntFloatPairArray;
 import ch.epfl.advdb.milestone2.utils.Kmath;
 import ch.epfl.advdb.milestone2.utils.NflixVector;
 
+/**
+ * initialize K initial cluster centers
+ * @author ashish
+ *
+ */
 public class InitKnflix {
 	
 	static class InitKMapper extends MapReduceBase

@@ -15,15 +15,15 @@ public static boolean CALCULATE_RMSE=false;
 	
 	/**
 	 * Ip/Op path for submitted code:
-	 * /netflix_imdb/input/train 
-	 * /netflix_imdb/input/test 
-	 * /stdX/output
+	 * Training Set: /netflix_imdb/input/train 
+	 * Test Set: /netflix_imdb/input/test 
+	 * Output: /stdX/output
 	 */
 	
 	
 	/**
 	 * fscore in development mode only
-	 * then if we wish
+	 * 
 	 */
 	
 	

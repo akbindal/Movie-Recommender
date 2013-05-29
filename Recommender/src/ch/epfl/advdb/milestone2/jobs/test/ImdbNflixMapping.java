@@ -37,10 +37,14 @@ import ch.epfl.advdb.milestone2.utils.IntArrayWritable;
 
 /**
  * maps imdb cluster with nflix cluster
- * this is one to many mapping
+ * (one to many mapping)
+ * cache: netflix cluster centers
+ * input: imdb clusters
+ * output: mapping from imdb clusters to netflix clusters
  * @author ashish
- *
+
  */
+
 public class ImdbNflixMapping {
 	static class ClusterUserMapper extends MapReduceBase implements 
 	Mapper<IntWritable, IntArrayWritable, IntWritable, IntArrayWritable>{

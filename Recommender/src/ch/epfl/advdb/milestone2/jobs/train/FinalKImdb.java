@@ -35,6 +35,15 @@ import ch.epfl.advdb.milestone2.utils.IntFloatPair;
 import ch.epfl.advdb.milestone2.utils.IntFloatPairArray;
 import ch.epfl.advdb.milestone2.utils.Kmath;
 
+/**
+ * map imdb movie cluster to movies.
+ * cache: imdb cluster centers
+ * input: imdb movies.
+ * output: mapping from imdb cluster to movies
+ * @author ashish
+ *
+ */
+
 public class FinalKImdb {
 	public static class FinalKMapper extends MapReduceBase
 		implements Mapper<IntWritable, IntArrayWritable, 

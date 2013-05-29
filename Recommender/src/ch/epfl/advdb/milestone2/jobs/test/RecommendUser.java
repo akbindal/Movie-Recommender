@@ -29,6 +29,14 @@ import ch.epfl.advdb.milestone2.jobs.test.ImdbUserMapping.ImdbMapper;
 import ch.epfl.advdb.milestone2.jobs.test.ImdbUserMapping.ImdbReducer;
 import ch.epfl.advdb.milestone2.utils.IntArrayWritable;
 
+/**
+ * map each test movie to user 
+ * cache: mapping from test movie to imdb cluster
+ * input: imdb cluster to user mapping
+ * output: mapping from test movie to user
+ * @author ashish
+ *
+ */
 public class RecommendUser {
 	
 	static class MovieUserMapper extends MapReduceBase implements 

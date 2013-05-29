@@ -32,6 +32,14 @@ import ch.epfl.advdb.milestone2.utils.FloatArrayWritable;
 import ch.epfl.advdb.milestone2.utils.IntArrayWritable;
 import ch.epfl.advdb.milestone2.utils.Kmath;
 
+/**
+ * map netflix movie cluster to movies.
+ * cache: netflix cluster centers
+ * input: netflix movies.
+ * output: mapping from netflix cluster to movies
+ * @author ashish
+ *
+ */
 public class FinalKNflix {
 	public static class FinalKMapper extends MapReduceBase
 	implements Mapper<IntWritable, FloatArrayWritable, 
